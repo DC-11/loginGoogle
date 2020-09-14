@@ -9,7 +9,7 @@
 <body>
   <div class="contenedor">
     <!-- <div class="imagen"> -->
-      <img src="img-login.jpg" alt="">
+      <img src="imagenes/img-login.jpg" alt="">
     <!-- </div>  -->
     <div class="formulario">
       <h2>Iniciar sesión</h2>
@@ -26,10 +26,11 @@
         <input type="submit" value="Iniciar Sesión" id="boton" disabled>
       </div>
       <div class="enlace">
-         <img src="ui.svg">
-        <a href="#">Iniciar sesión con Google</a>
+         <img src="imagenes/ui.svg">
+         <?php require ('autentificacion.php')?>
+        <a href="<?php echo $client->createAuthUrl() ?>">Iniciar sesión con Google</a>
       </div>
-    </div>
+    </div>  
   </div>
   <script src="validar.js"></script>
 </body>
